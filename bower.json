@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-		"angular-sanitize": "*"
+    "angular-sanitize": "*"
   }
 }
