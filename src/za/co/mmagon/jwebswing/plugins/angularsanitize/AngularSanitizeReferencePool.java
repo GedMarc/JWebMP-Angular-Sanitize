@@ -24,19 +24,20 @@ enum AngularSanitizeReferencePool implements ReferencePool
 	/**
 	 * A new AngularSlimScrollReferencePool
 	 */
-	private AngularSanitizeReferencePool()
+	AngularSanitizeReferencePool()
 	{
 	
 	}
+
 	/**
 	 * A new AngularSlimScrollReferencePool with data
 	 */
-	private AngularSanitizeReferencePool(String data)
+	AngularSanitizeReferencePool(String data)
 	{
-	
+
 	}
 	
-	private AngularSanitizeReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
+	AngularSanitizeReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{
 		this.javaScriptReference = javaScriptReference;
 		if (this.javaScriptReference != null)
