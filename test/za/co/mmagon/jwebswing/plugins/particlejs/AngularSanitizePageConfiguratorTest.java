@@ -1,4 +1,4 @@
-package za.co.mmagon.jwebswing.plugins.angularsanitize;
+package za.co.mmagon.jwebswing.plugins.particlejs;
 
 import org.junit.jupiter.api.Test;
 import za.co.mmagon.BaseTestClass;

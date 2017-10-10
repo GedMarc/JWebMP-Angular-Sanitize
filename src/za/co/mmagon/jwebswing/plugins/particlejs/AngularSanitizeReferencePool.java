@@ -1,4 +1,4 @@
-package za.co.mmagon.jwebswing.plugins.angularsanitize;
+package za.co.mmagon.jwebswing.plugins.particlejs;
 
 import za.co.mmagon.jwebswing.base.references.CSSReference;
 import za.co.mmagon.jwebswing.base.references.JavascriptReference;
