@@ -28,14 +28,6 @@ enum AngularSanitizeReferencePool implements ReferencePool
 	{
 	
 	}
-
-	/**
-	 * A new AngularSlimScrollReferencePool with data
-	 */
-	AngularSanitizeReferencePool(String data)
-	{
-
-	}
 	
 	AngularSanitizeReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{

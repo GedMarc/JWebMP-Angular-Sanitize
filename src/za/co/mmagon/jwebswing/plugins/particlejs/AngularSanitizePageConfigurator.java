@@ -8,6 +8,7 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
 import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 import za.co.mmagon.logger.LogFactory;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -62,6 +63,7 @@ import java.util.logging.Logger;
 			}
 			catch (ClassNotFoundException ex)
 			{
+				log.log(Level.FINER, "Text Angular not found, Placing in Sanitize Reference Pool", ex);
 				//Only use Angular Sanitize provided if text angular sanitizer module not found
 				page.getBody().addJavaScriptReference(AngularSanitizeReferencePool.AngularSanitize.getJavaScriptReference());
 			}
