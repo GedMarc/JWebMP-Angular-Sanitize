@@ -31,7 +31,8 @@ import java.util.logging.Logger;
 )
 @ComponentInformation(name = "Angular Sanitizer",
 		description = "The ngSanitize module provides functionality to sanitize HTML.",
-		url = "https://docs.angularjs.org/api/ngSanitize") class AngularSanitizePageConfigurator extends PageConfigurator
+		url = "https://docs.angularjs.org/api/ngSanitize")
+public class AngularSanitizePageConfigurator extends PageConfigurator
 {
 
 	private static final long serialVersionUID = 1L;
