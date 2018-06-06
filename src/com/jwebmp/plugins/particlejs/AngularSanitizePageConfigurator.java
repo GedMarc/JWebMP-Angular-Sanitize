@@ -3,10 +3,10 @@ package com.jwebmp.plugins.particlejs;
 import com.jwebmp.Page;
 import com.jwebmp.PageConfigurator;
 import com.jwebmp.base.angular.AngularPageConfigurator;
+import com.jwebmp.logger.LogFactory;
 import com.jwebmp.plugins.ComponentInformation;
 import com.jwebmp.plugins.PluginInformation;
 import com.jwebmp.plugins.jquery.JQueryPageConfigurator;
-import za.co.mmagon.logger.LogFactory;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
