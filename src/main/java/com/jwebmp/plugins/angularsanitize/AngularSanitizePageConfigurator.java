@@ -1,4 +1,4 @@
-package com.jwebmp.plugins.particlejs;
+package com.jwebmp.plugins.angularsanitize;
 
 import com.jwebmp.Page;
 import com.jwebmp.PageConfigurator;
@@ -37,7 +37,6 @@ public class AngularSanitizePageConfigurator
 
 	private static final long serialVersionUID = 1L;
 	private static final Logger log = LogFactory.getLog(AngularSanitizePageConfigurator.class.getName());
-
 
 	/*
 	 * Constructs a new AngularSanitizePageConfigurator

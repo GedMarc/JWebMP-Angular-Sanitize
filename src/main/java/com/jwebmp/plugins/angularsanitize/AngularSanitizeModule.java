@@ -15,27 +15,33 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.plugins.particlejs;
+package com.jwebmp.plugins.angularsanitize;
 
-import com.jwebmp.Page;
-import org.junit.jupiter.api.Test;
+import com.jwebmp.base.angular.modules.AngularModuleBase;
 
 /**
+ * The module getting loaded into angular
+ *
  * @author Marc Magon
+ * @since 08 Jun 2017
  */
-public class AngularSanitizePageConfiguratorTest
-
+class AngularSanitizeModule
+		extends AngularModuleBase
 {
 
-	public AngularSanitizePageConfiguratorTest()
+	private static final long serialVersionUID = 1L;
+
+	/*
+	 * Constructs a new AngularSanitizeModule
+	 */
+	public AngularSanitizeModule()
 	{
+		super("ngSanitize");
 	}
 
-	@Test
-	public void testSomeMethod()
+	@Override
+	public String renderFunction()
 	{
-		Page p = new Page();
-		System.out.println(p.toString(0));
+		return null;
 	}
-
 }

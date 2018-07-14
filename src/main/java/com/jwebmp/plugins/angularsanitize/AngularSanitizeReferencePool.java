@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.plugins.particlejs;
+package com.jwebmp.plugins.angularsanitize;
 
 import com.jwebmp.base.references.CSSReference;
 import com.jwebmp.base.references.JavascriptReference;
@@ -28,7 +28,8 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-enum AngularSanitizeReferencePool implements ReferencePool
+enum AngularSanitizeReferencePool
+		implements ReferencePool
 {
 	AngularSanitize(new JavascriptReference("AngularSanitize", 1.6, "bower_components/angular-sanitize/angular-sanitize.js"), null);
 	/**
