@@ -49,6 +49,13 @@
             <classifier>${jwebmp.runtime.classifier}</classifier>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jwebmp-log-master</artifactId>
+            <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
+            <type>jar</type>
+        </dependency>
 
     </dependencies>
     <scm>
