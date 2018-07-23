@@ -1,11 +1,11 @@
 package com.jwebmp.plugins.angularsanitize;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.logger.LogFactory;
 
 import java.util.logging.Level;
@@ -32,10 +32,9 @@ import java.util.logging.Logger;
 		description = "The ngSanitize module provides functionality to sanitize HTML.",
 		url = "https://docs.angularjs.org/api/ngSanitize")
 public class AngularSanitizePageConfigurator
-		extends PageConfigurator
+		implements IPageConfigurator
 {
 
-	private static final long serialVersionUID = 1L;
 	private static final Logger log = LogFactory.getLog(AngularSanitizePageConfigurator.class.getName());
 
 	/*
@@ -68,10 +67,6 @@ public class AngularSanitizePageConfigurator
 				page.getBody()
 				    .addJavaScriptReference(AngularSanitizeReferencePool.AngularSanitize.getJavaScriptReference());
 			}
-
-			page.getAngular()
-			    .getAngularModules()
-			    .add(new AngularSanitizeModule());
 		}
 		return page;
 	}

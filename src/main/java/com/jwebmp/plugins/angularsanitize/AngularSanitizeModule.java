@@ -18,6 +18,7 @@
 package com.jwebmp.plugins.angularsanitize;
 
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
+import com.jwebmp.core.base.angular.services.IAngularModule;
 
 /**
  * The module getting loaded into angular
@@ -25,8 +26,9 @@ import com.jwebmp.core.base.angular.modules.AngularModuleBase;
  * @author Marc Magon
  * @since 08 Jun 2017
  */
-class AngularSanitizeModule
+public class AngularSanitizeModule
 		extends AngularModuleBase
+		implements IAngularModule<AngularSanitizeModule>
 {
 
 	private static final long serialVersionUID = 1L;
