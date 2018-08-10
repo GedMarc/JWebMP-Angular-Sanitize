@@ -8,6 +8,7 @@ import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.logger.LogFactory;
 
+import javax.validation.constraints.NotNull;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -45,6 +46,7 @@ public class AngularSanitizePageConfigurator
 		//Nothing needed
 	}
 
+	@NotNull
 	@Override
 	public Page configure(Page page)
 	{

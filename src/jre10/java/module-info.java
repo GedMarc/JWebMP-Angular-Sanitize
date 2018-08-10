@@ -9,6 +9,7 @@ module com.jwebmp.plugins.angularsanitize {
 	requires com.jwebmp.core;
 	requires java.logging;
 	requires com.jwebmp.logmaster;
+	requires java.validation;
 
 	provides IPageConfigurator with AngularSanitizePageConfigurator;
 	provides IAngularModule with AngularSanitizeModule;
