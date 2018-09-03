@@ -35,8 +35,11 @@ import java.util.logging.Logger;
 public class AngularSanitizePageConfigurator
 		implements IPageConfigurator
 {
-
 	private static final Logger log = LogFactory.getLog(AngularSanitizePageConfigurator.class.getName());
+	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
 
 	/*
 	 * Constructs a new AngularSanitizePageConfigurator
@@ -44,6 +47,31 @@ public class AngularSanitizePageConfigurator
 	public AngularSanitizePageConfigurator()
 	{
 		//Nothing needed
+	}
+
+	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return AngularSanitizePageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		AngularSanitizePageConfigurator.enabled = mustEnable;
 	}
 
 	@NotNull
@@ -59,17 +87,23 @@ public class AngularSanitizePageConfigurator
 			{
 				if (Class.forName("com.jwebmp.plugins.textangular.TextAngularPageConfigurator") != null)
 				{
-					log.config("Because Text Angular is installed and provides angular sanitize, it will be loaded with Text Angular.");
+					AngularSanitizePageConfigurator.log.config("Because Text Angular is installed and provides angular sanitize, it will be loaded with Text Angular.");
 				}
 			}
 			catch (ClassNotFoundException ex)
 			{
-				log.log(Level.FINER, "Text Angular not found, Placing in Sanitize Reference Pool", ex);
+				AngularSanitizePageConfigurator.log.log(Level.FINER, "Text Angular not found, Placing in Sanitize Reference Pool", ex);
 				//Only use Angular Sanitize provided if text angular sanitizer module not found
 				page.getBody()
 				    .addJavaScriptReference(AngularSanitizeReferencePool.AngularSanitize.getJavaScriptReference());
 			}
 		}
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return AngularSanitizePageConfigurator.enabled;
 	}
 }
