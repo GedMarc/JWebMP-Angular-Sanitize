@@ -190,8 +190,8 @@
          *
          *   <pre><code>
          *   .rootOfTheIncludedContent svg {
-   *     overflow: hidden !important;
-   *   }
+         *     overflow: hidden !important;
+         *   }
          *   </code></pre>
          * </div>
          *
@@ -502,11 +502,11 @@
         /**
          * @example
          * htmlParser(htmlString, {
-   *     start: function(tag, attrs) {},
-   *     end: function(tag) {},
-   *     chars: function(text) {},
-   *     comment: function(text) {}
-   * });
+         *     start: function(tag, attrs) {},
+         *     end: function(tag) {},
+         *     chars: function(text) {},
+         *     comment: function(text) {}
+         * });
          *
          * @param {string} html string
          * @param {object} handler
@@ -601,11 +601,11 @@
          * create an HTML/XML writer which writes to buffer
          * @param {Array} buf use buf.join('') to get out sanitized html string
          * @returns {object} in the form of {
-   *     start: function(tag, attrs) {},
-   *     end: function(tag) {},
-   *     chars: function(text) {},
-   *     comment: function(text) {}
-   * }
+         *     start: function(tag, attrs) {},
+         *     end: function(tag) {},
+         *     chars: function(text) {},
+         *     comment: function(text) {}
+         * }
          */
         function htmlSanitizeWriterImpl(buf, uriValidator) {
             var ignoreCurrentElement = false;
