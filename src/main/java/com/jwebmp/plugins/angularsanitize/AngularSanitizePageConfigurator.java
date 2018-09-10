@@ -35,6 +35,9 @@ import java.util.logging.Logger;
 public class AngularSanitizePageConfigurator
 		implements IPageConfigurator
 {
+	/**
+	 * Field log
+	 */
 	private static final Logger log = LogFactory.getLog(AngularSanitizePageConfigurator.class.getName());
 	/**
 	 * If this configurator is enabled
@@ -78,32 +81,27 @@ public class AngularSanitizePageConfigurator
 	@Override
 	public Page configure(Page page)
 	{
-		if (!page.isConfigured())
-		{
-			JQueryPageConfigurator.setRequired(true);
-			AngularPageConfigurator.setRequired(true);
-
-			try
-			{
-				if (Class.forName("com.jwebmp.plugins.textangular.TextAngularPageConfigurator") != null)
-				{
-					AngularSanitizePageConfigurator.log.config("Because Text Angular is installed and provides angular sanitize, it will be loaded with Text Angular.");
-				}
-			}
-			catch (ClassNotFoundException ex)
-			{
-				AngularSanitizePageConfigurator.log.log(Level.FINER, "Text Angular not found, Placing in Sanitize Reference Pool", ex);
-				//Only use Angular Sanitize provided if text angular sanitizer module not found
-				page.getBody()
-				    .addJavaScriptReference(AngularSanitizeReferencePool.AngularSanitize.getJavaScriptReference());
-			}
-		}
+		JQueryPageConfigurator.setRequired(true);
+		AngularPageConfigurator.setRequired(true);
+		page.getBody()
+		    .addJavaScriptReference(AngularSanitizeReferencePool.AngularSanitize.getJavaScriptReference());
 		return page;
 	}
 
 	@Override
 	public boolean enabled()
 	{
+		try
+		{
+			if (Class.forName("com.jwebmp.plugins.textangular.TextAngularPageConfigurator") != null)
+			{
+				return false;
+			}
+		}
+		catch (ClassNotFoundException e)
+		{
+			log.log(Level.FINE, "Didn't find text angular, installing sanitize from sanitize module", e);
+		}
 		return AngularSanitizePageConfigurator.enabled;
 	}
 }

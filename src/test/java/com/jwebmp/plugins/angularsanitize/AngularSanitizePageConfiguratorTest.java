@@ -20,6 +20,8 @@ package com.jwebmp.plugins.angularsanitize;
 import com.jwebmp.core.Page;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * @author Marc Magon
  */
@@ -35,7 +37,11 @@ public class AngularSanitizePageConfiguratorTest
 	public void testSomeMethod()
 	{
 		Page p = new Page();
-		System.out.println(p.toString(0));
+		p.getOptions()
+		 .setDynamicRender(false);
+		String pageContent = p.toString(0);
+		assertTrue(pageContent.contains("'ngSanitize'"));
+		System.out.println(pageContent);
 	}
 
 }
