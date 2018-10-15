@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 		pluginCategories = "angular,sanitize,$sanitize, ui,web ui, framework",
 		pluginSubtitle = "The ngSanitize module provides functionality to sanitize HTML.",
 		pluginSourceUrl = "https://docs.angularjs.org/api/ngSanitize",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-Angular-Sanitize/wiki",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-Angular-Sanitize",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-Angular-Sanitize/wiki",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-Angular-Sanitize",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://docs.angularjs.org/api/ngSanitize",
@@ -33,7 +33,7 @@ import java.util.logging.Logger;
 		description = "The ngSanitize module provides functionality to sanitize HTML.",
 		url = "https://docs.angularjs.org/api/ngSanitize")
 public class AngularSanitizePageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<AngularSanitizePageConfigurator>
 {
 	/**
 	 * Field log
