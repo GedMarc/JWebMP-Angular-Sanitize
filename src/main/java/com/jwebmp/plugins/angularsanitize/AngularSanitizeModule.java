@@ -31,7 +31,6 @@ public class AngularSanitizeModule
 		implements IAngularModule<AngularSanitizeModule>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Constructs a new AngularSanitizeModule
