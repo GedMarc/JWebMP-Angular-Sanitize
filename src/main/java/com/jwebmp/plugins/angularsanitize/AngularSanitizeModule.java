@@ -18,7 +18,6 @@
 package com.jwebmp.plugins.angularsanitize;
 
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
-import com.jwebmp.core.base.angular.services.IAngularModule;
 
 /**
  * The module getting loaded into angular
@@ -27,11 +26,8 @@ import com.jwebmp.core.base.angular.services.IAngularModule;
  * @since 08 Jun 2017
  */
 public class AngularSanitizeModule
-		extends AngularModuleBase
-		implements IAngularModule<AngularSanitizeModule>
+		extends AngularModuleBase<AngularSanitizeModule>
 {
-
-
 	/*
 	 * Constructs a new AngularSanitizeModule
 	 */
