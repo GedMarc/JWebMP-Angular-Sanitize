@@ -13,7 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @author Marc Magon
+ * @author GedMarc
  * @since 08 Jun 2017
  */
 @PluginInformation(pluginName = "Angular Sanitizer",
