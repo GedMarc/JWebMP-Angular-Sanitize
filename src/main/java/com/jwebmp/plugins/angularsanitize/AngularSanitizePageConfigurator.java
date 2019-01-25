@@ -100,7 +100,7 @@ public class AngularSanitizePageConfigurator
 		}
 		catch (ClassNotFoundException e)
 		{
-			log.log(Level.FINE, "Didn't find text angular, installing sanitize from sanitize module", e);
+			log.log(Level.FINEST, "Didn't find text angular, installing sanitize from sanitize module", e);
 		}
 		return AngularSanitizePageConfigurator.enabled;
 	}
