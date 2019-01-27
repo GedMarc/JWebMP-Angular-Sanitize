@@ -1,11 +1,3 @@
-import com.jwebmp.core.base.angular.services.IAngularModule;
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.angularsanitize.AngularSanitizeModule;
-import com.jwebmp.plugins.angularsanitize.AngularSanitizePageConfigurator;
-import com.jwebmp.plugins.angularsanitize.implementations.AngularSanitizeExclusionsModule;
-
 module com.jwebmp.plugins.angularsanitize {
 	exports com.jwebmp.plugins.angularsanitize;
 
@@ -16,9 +8,9 @@ module com.jwebmp.plugins.angularsanitize {
 	requires com.jwebmp.guicedinjection;
 	requires com.jwebmp.core.angularjs;
 
-	provides IPageConfigurator with AngularSanitizePageConfigurator;
-	provides IAngularModule with AngularSanitizeModule;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.angularsanitize.AngularSanitizePageConfigurator;
+	provides com.jwebmp.core.base.angular.services.IAngularModule with com.jwebmp.plugins.angularsanitize.AngularSanitizeModule;
 
-	provides IGuiceScanJarExclusions with AngularSanitizeExclusionsModule;
-	provides IGuiceScanModuleExclusions with AngularSanitizeExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.angularsanitize.implementations.AngularSanitizeExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.angularsanitize.implementations.AngularSanitizeExclusionsModule;
 }
