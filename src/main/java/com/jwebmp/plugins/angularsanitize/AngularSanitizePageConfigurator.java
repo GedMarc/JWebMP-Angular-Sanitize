@@ -6,7 +6,7 @@ import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.logger.LogFactory;
+import com.guicedee.logger.LogFactory;
 
 import javax.validation.constraints.NotNull;
 import java.util.logging.Level;
