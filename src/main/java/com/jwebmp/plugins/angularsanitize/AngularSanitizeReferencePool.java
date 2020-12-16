@@ -31,7 +31,7 @@ import com.jwebmp.core.base.servlets.interfaces.ReferencePool;
 enum AngularSanitizeReferencePool
 		implements ReferencePool
 {
-	AngularSanitize(new JavascriptReference("AngularSanitize", 1.6, "bower_components/angular-sanitize/angular-sanitize.js"), null);
+	AngularSanitize(new JavascriptReference("AngularSanitize", 1.82, "bower_components/angular-sanitize/angular-sanitize.js"), null);
 	/**
 	 * Any sub data
 	 */

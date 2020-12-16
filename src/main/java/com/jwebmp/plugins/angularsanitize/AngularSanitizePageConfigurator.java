@@ -4,11 +4,13 @@ import com.jwebmp.core.Page;
 import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 import com.jwebmp.core.services.IPageConfigurator;
 import com.guicedee.logger.LogFactory;
 
 import jakarta.validation.constraints.NotNull;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -19,7 +21,7 @@ import java.util.logging.Logger;
 @PluginInformation(pluginName = "Angular Sanitizer",
 		pluginDescription = "The ngSanitize module provides functionality to sanitize HTML.",
 		pluginUniqueName = "jwebswing-angular-sanitizer",
-		pluginVersion = "1.6.4",
+		pluginVersion = "1.8.2",
 		pluginCategories = "angular,sanitize,$sanitize, ui,web ui, framework",
 		pluginSubtitle = "The ngSanitize module provides functionality to sanitize HTML.",
 		pluginSourceUrl = "https://docs.angularjs.org/api/ngSanitize",
@@ -28,7 +30,13 @@ import java.util.logging.Logger;
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://docs.angularjs.org/api/ngSanitize",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularSanitize.jar/download")
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.angular/jwebmp-angular-sanitize",
+		pluginGroupId = "com.jwebmp.plugins.angular",
+		pluginArtifactId = "jwebmp-angular-sanitize",
+		pluginModuleName = "com.jwebmp.plugins.angularsanitize",
+		pluginStatus = PluginStatus.Released,
+		pluginLastUpdatedDate = "2020/12/15"
+)
 @ComponentInformation(name = "Angular Sanitizer",
 		description = "The ngSanitize module provides functionality to sanitize HTML.",
 		url = "https://docs.angularjs.org/api/ngSanitize")
@@ -43,7 +51,7 @@ public class AngularSanitizePageConfigurator
 	 * If this configurator is enabled
 	 */
 	private static boolean enabled = true;
-
+	
 	/*
 	 * Constructs a new AngularSanitizePageConfigurator
 	 */
@@ -51,7 +59,7 @@ public class AngularSanitizePageConfigurator
 	{
 		//Nothing needed
 	}
-
+	
 	/**
 	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
 	 * <p>
@@ -63,20 +71,19 @@ public class AngularSanitizePageConfigurator
 	{
 		return AngularSanitizePageConfigurator.enabled;
 	}
-
+	
 	/**
 	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
 	 * <p>
 	 * If this configurator is enabled
 	 *
-	 * @param mustEnable
-	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * @param mustEnable the enabled of this AngularAnimatedChangePageConfigurator object.
 	 */
 	public static void setEnabled(boolean mustEnable)
 	{
 		AngularSanitizePageConfigurator.enabled = mustEnable;
 	}
-
+	
 	@NotNull
 	@Override
 	public Page configure(Page page)
@@ -87,7 +94,7 @@ public class AngularSanitizePageConfigurator
 		    .addJavaScriptReference(AngularSanitizeReferencePool.AngularSanitize.getJavaScriptReference());
 		return page;
 	}
-
+	
 	@Override
 	public boolean enabled()
 	{
