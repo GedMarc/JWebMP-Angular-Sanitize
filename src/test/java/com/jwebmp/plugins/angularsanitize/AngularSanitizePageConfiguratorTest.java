@@ -36,7 +36,7 @@ public class AngularSanitizePageConfiguratorTest
 	@Test
 	public void testSomeMethod()
 	{
-		Page p = new Page();
+		Page<?> p = new Page();
 		p.getOptions()
 		 .setDynamicRender(false);
 		String pageContent = p.toString(0);
