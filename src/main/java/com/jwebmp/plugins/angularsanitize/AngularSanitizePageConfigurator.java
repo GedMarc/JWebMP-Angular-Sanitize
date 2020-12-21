@@ -18,9 +18,9 @@ import java.util.logging.Logger;
  * @author GedMarc
  * @since 08 Jun 2017
  */
-@PluginInformation(pluginName = "Angular Sanitizer",
+@PluginInformation(pluginName = "Sanitizer",
 		pluginDescription = "The ngSanitize module provides functionality to sanitize HTML.",
-		pluginUniqueName = "jwebswing-angular-sanitizer",
+		pluginUniqueName = "angular-sanitizer",
 		pluginVersion = "1.8.2",
 		pluginCategories = "angular,sanitize,$sanitize, ui,web ui, framework",
 		pluginSubtitle = "The ngSanitize module provides functionality to sanitize HTML.",
