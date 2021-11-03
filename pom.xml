@@ -10,7 +10,7 @@
     <groupId>com.jwebmp.plugins.angular</groupId>
     <artifactId>jwebmp-angular-sanitize</artifactId>
     <packaging>jar</packaging>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <name>Angular Sanitize</name>
     <description>The JWebSwing implementation for Angular Sanitize</description>
     <url>https://github.com/GedMarc/Angular-Sanitize</url>
