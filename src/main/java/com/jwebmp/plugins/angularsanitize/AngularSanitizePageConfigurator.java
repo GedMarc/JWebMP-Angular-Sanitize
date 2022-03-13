@@ -88,8 +88,8 @@ public class AngularSanitizePageConfigurator
 	@Override
 	 public Page<?> configure(Page<?> page)
 	{
-		JQueryPageConfigurator.setRequired(true);
-		AngularPageConfigurator.setRequired(true);
+		
+		
 		page.getBody()
 		    .addJavaScriptReference(AngularSanitizeReferencePool.AngularSanitize.getJavaScriptReference());
 		return page;
