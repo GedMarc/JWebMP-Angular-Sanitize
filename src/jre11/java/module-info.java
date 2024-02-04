@@ -5,7 +5,7 @@ module com.jwebmp.plugins.angularsanitize {
 
 	requires com.jwebmp.core;
 	requires java.logging;
-	requires com.guicedee.logmaster;
+	
 	requires jakarta.validation;
 	requires com.guicedee.guicedinjection;
 	requires com.jwebmp.core.angular;
